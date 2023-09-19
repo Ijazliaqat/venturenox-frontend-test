@@ -1,38 +1,12 @@
 import React from "react";
 import Logo from "../../../assets/Logo.png";
 import { Link } from "react-router-dom";
+import { NavbarData } from "./nav-data";
 
 const NavBar = () => {
-  const navbarData = [
-    {
-      id: 1,
-      path: "",
-      navName: "Home",
-    },
-    {
-      id: 2,
-      path: "",
-      navName: "About us",
-    },
-    {
-      id: 3,
-      path: "",
-      navName: "Services",
-    },
-    {
-      id: 4,
-      path: "",
-      navName: "Blog",
-    },
-    {
-      id: 5,
-      path: "",
-      navName: "Contact",
-    },
-  ];
   return (
-    <>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div className="position-sticky top-0">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
         <div class="container">
           <img src={Logo} alt="" />
           <button
@@ -48,7 +22,7 @@ const NavBar = () => {
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto">
-              {navbarData.map((nav) => {
+              {NavbarData.map((nav) => {
                 return (
                   <li key={nav.id} class="nav-item active">
                     <Link
@@ -64,7 +38,7 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
