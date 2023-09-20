@@ -24,7 +24,7 @@ const NavBar = () => {
             <ul className="navbar-nav ms-auto">
               {NavbarData.map((nav) => {
                 return (
-                  <li key={nav.id} class="nav-item active">
+                  <li key={nav.id} className="nav-item active">
                     <Link
                       to={nav.path}
                       className="nav-link text-black fs-6 fw-semibold font-manrope"

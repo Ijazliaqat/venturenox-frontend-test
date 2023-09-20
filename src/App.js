@@ -3,6 +3,7 @@ import { router } from "./routes/routes";
 import "./global.css";
 
 function App() {
+ 
   return (
     <>
       <RouterProvider router={router} />
