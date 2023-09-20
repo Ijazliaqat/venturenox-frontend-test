@@ -21,10 +21,20 @@
 
 .font-manrope {
   font-family: "Manrope", sans-serif !important;
+  .fw-800 {
+    font-weight: 800 !important;
+  }
 }
+
 .fs-64 {
   font-size: 4rem !important;
 }
-.fw-800 {
-  font-weight: 800 !important;
+.fs-18 {
+  font-size: 18px !important;
+}
+.fs-40 {
+  font-size: 40px !important;
+}
+.fs-32 {
+  font-size: 32px !important;
 }

@@ -6,11 +6,11 @@ import { NavbarData } from "./nav-data";
 const NavBar = () => {
   return (
     <div className="position-sticky top-0">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <div class="container">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light ">
+        <div className="container">
           <img src={Logo} alt="" />
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarResponsive"
@@ -18,10 +18,10 @@ const NavBar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
+          <div className="collapse navbar-collapse" id="navbarResponsive">
+            <ul className="navbar-nav ms-auto">
               {NavbarData.map((nav) => {
                 return (
                   <li key={nav.id} class="nav-item active">
