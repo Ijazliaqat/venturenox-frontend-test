@@ -17,17 +17,17 @@ const FeatureCard = () => {
           <div className=" col-12 col-lg-8 position-relative">
             <div className="d-flex flex-wrap">
               <div className="flex-grow-1 d-flex flex-wrap align-items-center ">
-                <span className="fs-16 " >Posted on October 6th 2021</span>
+                <span className="fs-16 fst-normal" >Posted on October 6th 2021</span>
                 <span className="mx-5 d-flex align-items-center fs-16 ">
                   <img src={EyeIcon} alt="eye" /> 563 Views
                 </span>
               </div>
-              <span className="fw-16 fw-semibold text-orange">FEATURED</span>
+              <span className="fw-16 fw-semibold text-orange letter-spacing">FEATURED</span>
             </div>
             <div className=" d-flex flex-column justify-content-between mb-5">
             <div>
-              <h1>Should I Buy a New Car or Lease a New Car in 2021?</h1>
-              <p >
+              <h1 className="fs-40 fw-bolder fst-normal py-3">Should I Buy a New Car or Lease a New Car in 2021?</h1>
+              <p className="fs-16 fst-normal" >
                 We provide a full range of front end mechanical repairs for all
                 makes and models of cars, no matter the cause. This includes, We
                 provide a full range of front end mechanical.

@@ -7,21 +7,15 @@ import Car from "../../assets/blog-car.png";
 import Road from "../../assets/road.png";
 
 import "./single-blog-page.css";
+import useSingelBlogPage from "./useSingelBlogPage";
 
 const SingleBlogPage = () => {
-  const { singleBlog } = useSelector((state) => state.blog);
-  const dispatch = useDispatch();
-  const { blogId } = useParams();
-
-  console.log(singleBlog);
-  useEffect(() => {
-    dispatch(fetchSingleBlog(blogId));
-  }, [dispatch]);
+  const{singleBlog} = useSingelBlogPage()
   return (
     <div className="container">
       <div className="container d-flex justify-content-center">
         <div className="col-8">
-          <div className="d-flex flex-wrap">
+          <div className="d-flex flex-wrap mt-5">
             <div className=" d-flex flex-wrap align-items-center pb-3">
               <span className="fs-16 ">Posted on October 6th 2021</span>
               <span className="mx-5 d-flex align-items-center fs-16 ">

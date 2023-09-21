@@ -5,12 +5,13 @@ import { NavbarData } from "./nav-data";
 
 const NavBar = () => {
   return (
-    <div className="position-sticky top-0">
+    <div className="position-sticky top-0 bg-white"  style={{ zIndex:2 }}>
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
         <div className="container">
           <img src={Logo} alt="" />
           <button
-            className="navbar-toggler"
+           
+            className="navbar-toggler shadow-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarResponsive"

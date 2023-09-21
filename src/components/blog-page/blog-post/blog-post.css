@@ -1,8 +1,13 @@
 .blog-title {
-  height: 100%;
+  max-width: 100% !important;
+  height: 99px !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
 }
 
 .blog-subtitle {
-  min-height: 150px !important;
-  overflow-y: auto;
+  max-width: 100%!important;
+  height: 75px !important;
+  text-overflow: ellipsis !important;
+  overflow: hidden !important;
 }

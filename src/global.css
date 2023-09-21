@@ -34,29 +34,35 @@
 
 .font-manrope {
   font-family: "Manrope", sans-serif !important;
-  .fw-800 {
-    font-weight: 800 !important;
-  }
+}
+
+.fw-800 {
+  font-weight: 800 !important;
 }
 
 .fs-64 {
   font-size: 4rem !important;
 }
+
 .fs-18 {
   font-size: 18px !important;
 }
+
 .fs-40 {
   font-size: 40px !important;
 }
+
 .fs-48 {
   font-size: 48px !important;
 }
 .fs-32 {
   font-size: 32px !important;
 }
+
 .fs-24 {
   font-size: 24px !important;
 }
+
 .fs-16 {
   font-size: 16px !important;
 }

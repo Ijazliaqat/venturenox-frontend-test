@@ -1,10 +1,6 @@
 .bg-left-card {
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.73)),
     url(../../assets/hero-img.png);
-
-  /* background-image: url(../../assets/hero-img.png); */
-  
   height: 50vh;
   background-size: 100% 100%;
 }

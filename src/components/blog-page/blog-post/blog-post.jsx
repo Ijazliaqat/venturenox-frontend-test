@@ -35,10 +35,10 @@ const BlogPost = () => {
                 </div>
 
                 <div>
-                  <h1 id="" className="fs-32 fw-bold py-3 blog-title">
-                    {item?.Title?.substring(0, 80)}..
+                  <h1 id="" className="fs-32 fw-bold py-3 fst-normal blog-title">
+                    {item?.Title}
                   </h1>
-                  <p className="blog-subtitle fs-16 fw-bolder">
+                  <p className="blog-subtitle fs-16 fst-normal">
                     {item?.Subtitle?.substring(0, 170)}...
                   </p>
                 </div>

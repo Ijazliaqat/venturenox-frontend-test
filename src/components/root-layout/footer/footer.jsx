@@ -54,7 +54,7 @@ const Footer = () => {
       </div>
 
       <div className=" foot-bg text-white py-3">
-        <div className="container d-flex align-items-center justify-content-between">
+        <div className=" container d-flex flex-wrap align-items-center justify-content-lg-between justify-content-center ">
           <div>
             <img src={Logo} alt="" />
           </div>
