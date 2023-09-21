@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
 import EyeIcon from "../../../assets/Eye.png";
 import Blog from "../../../assets/blog.png";
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-
-
+import useBlogPost from "./useBlogPost";
 import "./blog-post.css";
-import { fetchBlogs } from "../../../store/blogSlice/blogthunk";
 
 const BlogPost = () => {
-  const { blog } = useSelector((state) => state.blog);
+  const { blog } = useBlogPost();
 
-  const dispatch = useDispatch();
-
-
-  useEffect(() => {
-    dispatch(fetchBlogs());
-  }, [dispatch]);
   return (
     <div className="container py-5">
       <div className="row">
@@ -35,7 +25,7 @@ const BlogPost = () => {
                 </div>
 
                 <div>
-                  <h1 id="" className="fs-32 fw-bold py-3 fst-normal blog-title">
+                  <h1 className="fs-32 fw-bold py-3 fst-normal blog-title">
                     {item?.Title}
                   </h1>
                   <p className="blog-subtitle fs-16 fst-normal">
@@ -49,7 +39,7 @@ const BlogPost = () => {
       </div>
 
       <div className="text-center mt-5">
-        <button type="button" className="btn btn-dark" onClick={() => {}}>
+        <button type="button" className="btn btn-dark">
           Load More
         </button>
       </div>

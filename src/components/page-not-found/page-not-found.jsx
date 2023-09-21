@@ -15,7 +15,6 @@ const PageNotFound = () => {
           </div>
           <div class=" col-md-6 mt-5">
             <p class="fs-3">
-              {" "}
               <span class="text-danger">Opps!</span> Page not found.
             </p>
             <p class="lead">The page you’re looking for doesn’t exist.</p>

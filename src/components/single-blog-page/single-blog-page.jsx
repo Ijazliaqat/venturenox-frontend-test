@@ -1,7 +1,3 @@
-import React, { useEffect } from "react";
-import { fetchSingleBlog } from "../../store/blogSlice/blogthunk";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 import EyeIcon from "../../assets/Eye.png";
 import Car from "../../assets/blog-car.png";
 import Road from "../../assets/road.png";

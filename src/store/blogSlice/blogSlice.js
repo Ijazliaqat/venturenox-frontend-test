@@ -1,21 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchBlogs,fetchSingleBlog } from "./blogthunk";
+import { fetchBlogs, fetchSingleBlog } from "./blogthunk";
 
 const initialState = {
   blog: [],
-  singleBlog:{},
+  singleBlog: {},
   isLoading: "idle",
   error: null,
 };
-
-
 
 export const blogSlice = createSlice({
   name: "blog",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-
     builder.addCase(fetchBlogs.pending, (state) => {
       state.isLoading = "pending";
     });
@@ -41,7 +38,6 @@ export const blogSlice = createSlice({
       state.isLoading = "rejected";
       state.error = action.error.message;
     });
-    
   },
 });
 
