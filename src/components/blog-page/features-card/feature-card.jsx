@@ -17,12 +17,12 @@ const FeatureCard = () => {
           <div className=" col-12 col-lg-8 position-relative">
             <div className="d-flex flex-wrap">
               <div className="flex-grow-1 d-flex flex-wrap align-items-center ">
-                <span>Posted on October 6th 2021</span>
-                <span className="mx-5 d-flex align-items-center">
+                <span className="fs-16 " >Posted on October 6th 2021</span>
+                <span className="mx-5 d-flex align-items-center fs-16 ">
                   <img src={EyeIcon} alt="eye" /> 563 Views
                 </span>
               </div>
-              <span>FEATURED</span>
+              <span className="fw-16 fw-semibold text-orange">FEATURED</span>
             </div>
             <div className=" d-flex flex-column justify-content-between mb-5">
             <div>

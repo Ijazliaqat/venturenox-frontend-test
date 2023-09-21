@@ -6,12 +6,12 @@ export const NavbarData = [
     },
     {
       id: 2,
-      path: "",
+      path: "/about",
       navName: "About us",
     },
     {
       id: 3,
-      path: "",
+      path: "services",
       navName: "Services",
     },
     {
@@ -21,7 +21,7 @@ export const NavbarData = [
     },
     {
       id: 5,
-      path: "",
+      path: "/contact",
       navName: "Contact",
     },
   ];

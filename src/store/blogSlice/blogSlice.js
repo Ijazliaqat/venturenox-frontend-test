@@ -1,38 +1,47 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createSlice } from "@reduxjs/toolkit";
+import { fetchBlogs,fetchSingleBlog } from "./blogthunk";
 
 const initialState = {
   blog: [],
-  isLoading: false,
+  singleBlog:{},
+  isLoading: "idle",
   error: null,
 };
 
-export const fetchBlogs = createAsyncThunk("blogs", async () => {
-  const res = await axios(
-    "https://61791a83aa7f3400174047a6.mockapi.io/v1/GetBLogs/"
-  );
 
-  const data = await res.data;
-  return data;
-});
 
 export const blogSlice = createSlice({
   name: "blog",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
+
     builder.addCase(fetchBlogs.pending, (state) => {
-      state.isLoading = true;
+      state.isLoading = "pending";
     });
     builder.addCase(fetchBlogs.fulfilled, (state, action) => {
       console.log(action.payload);
-      state.isLoading = false;
+      state.isLoading = "fulfilled";
       state.blog = action.payload;
     });
     builder.addCase(fetchBlogs.rejected, (state, action) => {
-      state.isLoading = false;
+      state.isLoading = "rejected";
       state.error = action.error.message;
     });
+
+    builder.addCase(fetchSingleBlog.pending, (state) => {
+      state.isLoading = "pending";
+    });
+    builder.addCase(fetchSingleBlog.fulfilled, (state, action) => {
+      console.log(action.payload);
+      state.isLoading = "fulfilled";
+      state.singleBlog = action.payload;
+    });
+    builder.addCase(fetchSingleBlog.rejected, (state, action) => {
+      state.isLoading = "rejected";
+      state.error = action.error.message;
+    });
+    
   },
 });
 
