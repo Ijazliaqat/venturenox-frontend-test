@@ -3,9 +3,12 @@ import Blog from "../../../assets/blog.png";
 import { Link } from "react-router-dom";
 import useBlogPost from "./useBlogPost";
 import "./blog-post.css";
+import { incrementBlogView } from "../../../store/blogSlice/blogSlice";
 
 const BlogPost = () => {
-  const { blog } = useBlogPost();
+  const { blog, dispatch } = useBlogPost();
+
+  console.log(blog);
 
   return (
     <div className="container py-5">
@@ -20,11 +23,15 @@ const BlogPost = () => {
                   <span className="fs-16">Posted on October 6th 2021</span>
                   <span className="d-flex align-items-center fs-16">
                     <img src={EyeIcon} alt="eye" />
-                    563 Views
+                    {item.blogViews} Views
                   </span>
                 </div>
 
-                <div>
+                <div
+                  onClick={() => {
+                    dispatch(incrementBlogView(item.id));
+                  }}
+                >
                   <h1 className="fs-32 fw-bold py-3 fst-normal blog-title">
                     {item?.Title}
                   </h1>

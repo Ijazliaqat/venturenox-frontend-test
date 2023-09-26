@@ -11,15 +11,30 @@ const initialState = {
 export const blogSlice = createSlice({
   name: "blog",
   initialState,
-  reducers: {},
+  reducers: {
+    incrementBlogView: (state, action) => {
+      // const currBlog = state.blog.find((obj) => obj.id === action.payload);
+      // currBlog.blogViews += 1;
+      state.blog = state.blog.map((obj) => {
+        if (obj.id === action.payload) {
+          return { ...obj, blogViews: obj.blogViews + 1 };
+        } else {
+          return obj;
+        }
+      });
+      // console.log(currBlog.blogViews);
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchBlogs.pending, (state) => {
       state.isLoading = "pending";
     });
     builder.addCase(fetchBlogs.fulfilled, (state, action) => {
-      console.log(action.payload);
       state.isLoading = "fulfilled";
-      state.blog = action.payload;
+      const data = action.payload.map((item) => {
+        return { ...item, blogViews: 0 };
+      });
+      state.blog = data;
     });
     builder.addCase(fetchBlogs.rejected, (state, action) => {
       state.isLoading = "rejected";
@@ -41,4 +56,5 @@ export const blogSlice = createSlice({
   },
 });
 
+export const { incrementBlogView } = blogSlice.actions;
 export default blogSlice.reducer;

@@ -11,7 +11,7 @@ const useBlogPost = () => {
     dispatch(fetchBlogs());
   }, [dispatch]);
 
-  return {blog};
+  return {blog,dispatch};
 };
 
 export default useBlogPost;

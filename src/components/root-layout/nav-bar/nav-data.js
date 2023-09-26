@@ -24,4 +24,9 @@ export const NavbarData = [
       path: "/contact",
       navName: "Contact",
     },
+    {
+      id: 6,
+      path: "/property-search-tool",
+      navName: "Property Search Tool",
+    },
   ];

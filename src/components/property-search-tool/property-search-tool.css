@@ -1,0 +1,7 @@
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.active-nav {
+  font-weight: bold !important;
+}
