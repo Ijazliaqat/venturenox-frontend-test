@@ -44,7 +44,7 @@ const PropertySearchTool = () => {
 
       <div className="row container-fluid">
         <div
-          className="col-md-2 col-lg-2 d-flex flex-column justify-content-center mx-0"
+          className="col-sm-12 col-md-2 col-lg-2 d-flex flex-column justify-content-center mx-0"
           style={{ height: "80vh" }}
         >
           <h5 className="fw-bold">Property types</h5>
@@ -65,7 +65,7 @@ const PropertySearchTool = () => {
             </nav>
           </div>
         </div>
-        <div className="col-md-2 col-lg-10">
+        <div className="col-sm-12 col-md-10 col-lg-10">
           <div>
             <div className="mt-4">
               <h5 className="fw-bold mx-5">Search</h5>
